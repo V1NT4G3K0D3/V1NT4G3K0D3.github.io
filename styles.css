@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('images/morning.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header {
+    padding-top: 10px;
+}
+
+h1 {
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.links {
+    width: 1rem;
+}
+
+.nav {
+    width: 1.5rem;
+}
+
+.external {
+    padding: 50px;
+}
+
+#viewmore {
+    width: 2rem;
+}
+
+.maincontent {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+}
+
+.bottomContent {
+    position: absolute;
+    left: 19.5%;
+    top: 80%;
+}
+
+.projectsmaincontent {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+}
