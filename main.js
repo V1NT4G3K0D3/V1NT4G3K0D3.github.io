@@ -8,9 +8,19 @@ let animate = (word, callback) => {
 let queuedWord = "Developer"
 let i = -1
 let dir = 1
+let j = 0
 
 let aux = () => {
     i += dir
+
+    if (i === 0 && dir === -1) {
+        if (j === words.length - 1) {
+            j = -1
+        }
+        j++
+        queuedWord = words[j]
+    }
+
     if (i >= queuedWord.length) {
         dir = -1
     } else if (i <= 0) {
