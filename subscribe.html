@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <style>
+        input:invalid {
+            border: 1px solid red;
+        }
+        
+        input:valid {
+            border: 1px solid black;
+        }
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+<body>
+    <header class="flex flex-row justify-between">
+        <div class="flex flex-col p-16">
+            <a href="index.html" class="">
+                <p class="text-base text-white font-black pb-5">Home</p>
+            </a>
+            <a href="subscribe.html" class="">
+                <p class="text-base text-white font-black pb-5">Subscibe</p>
+            </a>
+        </div>
+        <!-- <div class="p-16">
+        <img id="nav" src="images/nav.svg"/>
+    </div> -->
+        <div class="flex flex-col p-16">
+            <a href="https://www.linkedin.com/in/pragati-bhattad-53a849198/" target="_blank">
+                <img class="links my-3" src="images/linkedin.png" />
+            </a>
+            <a href="https://github.com/pragati1610/" target="_blank">
+                <img class="links my-3" src="images/github.png" />
+            </a>
+            <a href="https://twitter.com/HelioLynx" target="_blank">
+                <img class="links my-3" src="images/twitter.png" />
+            </a>
+            <a href="mailto:pragatibhattad1610@gmail.com" target="_blank">
+                <img class="links my-3" src="images/mail.png" />
+            </a>
+            <div>
+                <img src="images/line.svg" />
+            </div>
+        </div>
+    </header>
+
+    <div class="subscibemaincontent">
+        <div class="container mx-auto ">
+            <form class="w-full max-w-lg my-10 mx-auto" id="user-form">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="name">
+                            Name
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" name="name" type="text" required>
+                    </div>
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="email">
+                            Email
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="email" id="email" name="email">
+                    </div>
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="password">
+                                Password
+                            </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="password" id="password" name="password" placeholder="******************">
+                    </div>
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="dob">
+                            Date of Birth
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="date" id="dob" name="dob">
+                    </div>
+                    <div class="w-full px-3 py-5">
+                        <label class="uppercase tracking-wide text-white text-xs font-bold mb-2 mx-2" for="acceptTerms">
+                            Accept Terms & Conditions
+                        </label>
+                        <input class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" type="checkbox" id="acceptTerms" name="acceptTerms">
+                    </div>
+                    <div class="py-1 text-right sm:px-6">
+                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                          Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="relative bg-white px-6 mt-5 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10">
+                <div class="mx-auto">
+                    <h2 class="text-3xl text-center font-bold leading-tight">Entries</h2>
+                    <div class="divide-y divide-gray-300/50" id="user-entries"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="subscribeMain.js"></script>
+</body>
+
+</html>
