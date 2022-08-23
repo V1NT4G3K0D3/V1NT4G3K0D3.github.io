@@ -1,3 +1,5 @@
+// Animate
+
 let words = ["Developer", "Designer", "Freelancer", "Generation google scholar", "Google summer intern", "Programmer", "Blogger", "Learner", "Egalitarian", "Environmentalist"]
 
 let animate = (word, callback) => {
