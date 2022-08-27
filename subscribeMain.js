@@ -11,19 +11,19 @@ email.addEventListener("input", function(event) {
         email.setCustomValidity("");
     }
 });
-// dob.addEventListener("input", (event) => {
-//     let date = new Date();
-//     let parts = dob.value.split('-');
-//     let dobDate = new Date(parts[0], parts[1] - 1, parts[2]);
-//     let difference = (date - dobDate) / (1000 * 60 * 60 * 24);
-//     console.log(dobDate, date, difference)
-//     if (!(difference >= 6574.5 && difference <= 20088.8)) {
-//         dob.setCustomValidity("Age should be between 18 and 55!");
-//         dob.reportValidity();
-//     } else {
-//         dob.setCustomValidity("");
-//     }
-// });
+dob.addEventListener("input", (event) => {
+    let date = new Date();
+    let parts = dob.value.split('-');
+    let dobDate = new Date(parts[0], parts[1] - 1, parts[2]);
+    let difference = (date - dobDate) / (1000 * 60 * 60 * 24);
+    console.log(dobDate, date, difference)
+    if (!(difference >= 6574.5 && difference <= 20088.8)) {
+        dob.setCustomValidity("Age should be between 18 and 55!");
+        dob.reportValidity();
+    } else {
+        dob.setCustomValidity("");
+    }
+});
 
 let userEntries = [];
 
