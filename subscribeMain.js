@@ -11,22 +11,21 @@ email.addEventListener("input", function(event) {
         email.setCustomValidity("");
     }
 });
-dob.addEventListener("input", (event) => {
-    let date = new Date();
-    let parts = dob.value.split('-');
-    let dobDate = new Date(parts[0], parts[1] - 1, parts[2]);
-    let difference = (date - dobDate) / (1000 * 60 * 60 * 24);
-    console.log(dobDate, date, difference)
-    if (!(difference >= 6574.5 && difference <= 20088.8)) {
-        dob.setCustomValidity("Age should be between 18 and 55!");
-        dob.reportValidity();
-    } else {
-        dob.setCustomValidity("");
-    }
-});
+// dob.addEventListener("input", (event) => {
+//     let date = new Date();
+//     let parts = dob.value.split('-');
+//     let dobDate = new Date(parts[0], parts[1] - 1, parts[2]);
+//     let difference = (date - dobDate) / (1000 * 60 * 60 * 24);
+//     console.log(dobDate, date, difference)
+//     if (!(difference >= 6574.5 && difference <= 20088.8)) {
+//         dob.setCustomValidity("Age should be between 18 and 55!");
+//         dob.reportValidity();
+//     } else {
+//         dob.setCustomValidity("");
+//     }
+// });
 
 let userEntries = [];
-
 
 const retrieveEntries = () => {
     let entries = localStorage.getItem("user-entries");
@@ -65,6 +64,7 @@ const displayEntries = () => {
     details.innerHTML = table;
 };
 
+let form = document.getElementById("user-form");
 
 const saveUserForm = (event) => {
     event.preventDefault();
@@ -73,7 +73,8 @@ const saveUserForm = (event) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const dob = document.getElementById("dob").value;
-    const acceptTermsAndConditions = document.getElementById("acceptTerms").checked;
+    const acceptTermsAndConditions =
+        document.getElementById("acceptTerms").checked;
 
     const userDetails = {
         name,
@@ -88,11 +89,11 @@ const saveUserForm = (event) => {
     console.log("Submitted 3");
 
     displayEntries();
+    form.reset();
 };
 
-let form = document.getElementById("user-form");
 form.addEventListener("submit", saveUserForm);
 
 window.onload = function() {
     displayEntries();
-}
+};
